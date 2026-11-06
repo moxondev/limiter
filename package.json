@@ -15,8 +15,11 @@
         "dist"
     ],
     "scripts": {
+        "prepare": "tsc",
         "build": "tsc",
-        "test": "tsc && node --test \"tests/*.test.mjs\""
+        "test": "tsc && node --test \"tests/*.test.mjs\"",
+        "check": "tsc --noEmit && eslint src/ tests/ && prettier --check .",
+        "format": "prettier --write . && eslint --fix src/ tests/"
     },
     "engines": {
         "node": ">=22.12.0"
