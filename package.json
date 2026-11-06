@@ -1,0 +1,53 @@
+{
+    "version": "1.0.0",
+    "name": "@moxon/limiter",
+    "description": "A small rate limiter with a per-client sliding window and a global cap, driven by the caller's clock.",
+    "main": "./dist/limiter.js",
+    "types": "./dist/limiter.d.ts",
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./dist/limiter.d.ts",
+            "default": "./dist/limiter.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "tsc && node --test \"tests/*.test.mjs\""
+    },
+    "engines": {
+        "node": ">=22.12.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "eslint": "^10.1.0",
+        "eslint-config-prettier": "^10.1.8",
+        "globals": "^17.13.0",
+        "prettier": "^3.8.1",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.57.2"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/moxondev/limiter.git"
+    },
+    "keywords": [
+        "rate-limit",
+        "rate-limiter",
+        "throttle",
+        "sliding-window",
+        "http"
+    ],
+    "author": "Sylvain L.",
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://github.com/moxondev/limiter/issues"
+    },
+    "homepage": "https://github.com/moxondev/limiter"
+}
